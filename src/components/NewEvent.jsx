@@ -41,9 +41,15 @@ export const NewEvent = (props) => {
             <div className="dropdown_row_item">
               <Form.Label>Time</Form.Label>
               <Form.Control as="select">
-                <option>Maria</option>
-                <option>Bob</option>
-                <option>Alex</option>
+                <option>10:00</option>
+                <option>11:00</option>
+                <option>12:00</option>
+                <option>13:00</option>
+                <option>14:00</option>
+                <option>15:00</option>
+                <option>16:00</option>
+                <option>17:00</option>
+                <option>18:00</option>
               </Form.Control>
             </div>
           </Form.Group>

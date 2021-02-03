@@ -1,23 +1,30 @@
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .content_container {
   display: grid;
-  grid-template-rows: 50px 1fr;
+  grid-template-rows: 60px 1fr;
 }
 
 .header_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.title_container {
+  font-weight: 600;
+  font-size: larger;
 }
 
 .buttons_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-content: end;
 }
 
 .calendar_container {
@@ -27,17 +34,22 @@
 
 .table_header {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: 80px repeat(5, 1fr);
+  background-color: gray;
 }
 
 .table_content {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: 80px repeat(5, 1fr);
 }
 
 .time_name_column {
   display: grid;
   grid-template-rows: repeat(9, 1fr);
+  background-color: gray;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
 }
 
 .new_event_container {
@@ -57,4 +69,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: flex-end;
+}
+
+.table_header_item {
+  text-align: center;
+  font-weight: 600;
 }

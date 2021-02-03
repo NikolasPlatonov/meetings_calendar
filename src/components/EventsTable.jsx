@@ -23,11 +23,6 @@ export const EventsTable = (props) => {
           <div>17:00</div>
           <div>18:00</div>
         </div>
-        <div>1 col</div>
-        <div>2 col</div>
-        <div>3 col</div>
-        <div>4 col</div>
-        <div>5 col</div>
       </div>
     </div>
   );

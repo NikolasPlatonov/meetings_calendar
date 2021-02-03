@@ -10,19 +10,20 @@ export const Calendar = (props) => {
         <div className="header_container">
           <div className="title_container">Calendar</div>
           <div className="buttons_container">
-            <DropdownButton
-              menuAlign="right"
-              title="All members"
-              id="dropdown-menu-align-right"
-            >
-              <Dropdown.Item eventKey="1">Action</Dropdown.Item>
-              <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
-              <Dropdown.Item eventKey="3">Something else here</Dropdown.Item>
-              <Dropdown.Divider />
-              <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
-            </DropdownButton>
+            <Dropdown>
+              <Dropdown.Toggle variant="secondary" id="dropdown-members">
+                All members
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item eventKey="Maria">Maria</Dropdown.Item>
+                <Dropdown.Item eventKey="Bob">Bob</Dropdown.Item>
+                <Dropdown.Item eventKey="Alex">Alex</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+
             <NavLink to={`/create-event`} style={{textDecoration: 'none'}}>
-              <Button variant="primary">New event +</Button>
+              <Button variant="secondary">New event +</Button>
             </NavLink>
 
           </div>
