@@ -12,7 +12,7 @@ export const Calendar = (props) => {
           <div className="buttons_container">
             <DropdownButton
               menuAlign="right"
-              title="Dropdown right"
+              title="All members"
               id="dropdown-menu-align-right"
             >
               <Dropdown.Item eventKey="1">Action</Dropdown.Item>
@@ -22,7 +22,7 @@ export const Calendar = (props) => {
               <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
             </DropdownButton>
             <NavLink to={`/create-event`} style={{textDecoration: 'none'}}>
-              <Button variant="secondary">New event +</Button>
+              <Button variant="primary">New event +</Button>
             </NavLink>
 
           </div>
