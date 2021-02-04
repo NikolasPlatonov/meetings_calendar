@@ -1,9 +1,26 @@
-import React from 'react';
-import {Button, Dropdown, DropdownButton} from 'react-bootstrap';
+import React, {useState, useEffect} from 'react';
+import {Button, Dropdown} from 'react-bootstrap';
 import {NavLink} from 'react-router-dom';
 import {EventsTable} from './EventsTable';
+import eventsData from '../data/events.json';
+// import axios from 'axios';
+
 
 export const Calendar = (props) => {
+  const [state, setAppState] = useState();
+  console.log("data", state)
+
+  useEffect(() => {
+    setAppState(eventsData)
+  }, []);
+
+  // how get data from api
+  // useEffect(() => {
+  //   setAppState({loading: true});
+  //   const events = `https://api.github.com/events/blablabla123/events`;
+  //   fetch(events).then((responce) => responce.json()).then((events) => {setAppState({loading: false, events: events});});
+  // }, [setAppState]);
+
   return (
     <div className="container">
       <div className="content_container">

@@ -1,17 +1,20 @@
 [
   {
+    "id": 0,
     "event": "Intro to HTML/CSS",
     "participants": ["Maria", "Bob", "Alex"],
     "day": "Monday",
     "time": "11:00"
   },
   {
+    "id": 1,
     "event": "Intro to React JS",
     "participants": ["Maria", "Bob"],
     "day": "Wednesday",
     "time": "14:00"
   },
   {
+    "id": 2,
     "event": "Intro to Mongo DB",
     "participants": ["Bob", "Alex"],
     "day": "Friday",
