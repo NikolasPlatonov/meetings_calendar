@@ -8,7 +8,6 @@ import eventsData from '../data/events.json';
 
 export const Calendar = (props) => {
   const [state, setAppState] = useState();
-  console.log("data", state)
 
   useEffect(() => {
     setAppState(eventsData)
@@ -47,7 +46,7 @@ export const Calendar = (props) => {
         </div>
 
       </div>
-      <EventsTable />
+      <EventsTable state={state} />
     </div>
   );
 }
