@@ -6,16 +6,6 @@ export const EventsTable = () => {
   const daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
   const hoursOfDay = ['10', '11', '12', '13', '14', '15', '16', '17', '18'];
 
-  const events = (data, days) => {
-    for (let key in data) {
-      for (let day of days) {
-        if (key.slice(0, 3) === day) {
-          return (data[key]);
-        }
-      }
-    }
-  };
-
   const dayFilter = (hoursArr, day) => {
     const result = hoursArr.map(hour => {
       return (
