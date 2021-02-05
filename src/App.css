@@ -40,7 +40,7 @@
 
 .table_content {
   display: grid;
-  grid-template-columns: 80px 1fr;
+  grid-template-rows: 50px 1fr;
   align-items: center;
 }
 
@@ -69,14 +69,29 @@
   align-items: flex-end;
 }
 
-.table_header_item {
+.table_day_header {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: flex-end;
+  background-color: gray;
+}
+
+.table_day_events {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: flex-start;
+  height: 100%;
+}
+
+.table_day_item {
   text-align: center;
   font-weight: 600;
+  height: 50px;
 }
 
 .time_title_item {
   text-align: center;
   font-weight: 600;
-  height: 40px;
-  margin-top: 10px;
+  height: 50px;
+  border-style: solid;
 }

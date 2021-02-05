@@ -1,18 +1,19 @@
-[
-  {
-    "day": "Monday",
-    "eventTime": [
-      { "10:00": true },
-      { "11:00": false },
-      { "12:00": false },
-      { "13:00": false },
-      { "14:00": false },
-      { "15:00": false },
-      { "16:00": false },
-      { "17:00": false },
-      { "18:00": false }
-    ],
-    "title": "Intro to HTML/CSS",
-    "participants": ["Maria", "Bob", "Alex"]
+{
+  "Monday": {
+    "10": {
+      "title": "Intro to HTML/CSS",
+      "participants": ["Maria", "Bob", "Alex"]
+    },
+    "18": {
+      "title": "Intro to React JS",
+      "participants": ["Maria", "Bob", "Alex"]
+    }
+  },
+
+  "Thuesday": {
+    "14": {
+      "title": "Intro to React JS",
+      "participants": ["Maria", "Bob"]
+    }
   }
-]
+}
