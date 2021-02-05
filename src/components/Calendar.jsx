@@ -1,17 +1,22 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import {Button, Dropdown} from 'react-bootstrap';
 import {NavLink} from 'react-router-dom';
 import {EventsTable} from './EventsTable';
-import eventsData from '../data/events.json';
-// import axios from 'axios';
+
 
 
 export const Calendar = (props) => {
-  const [state, setAppState] = useState();
+  // useEffect(() => {
+  //   setAppState(data)
+  // }, []);
 
-  useEffect(() => {
-    setAppState(eventsData)
-  }, []);
+  // useEffect(() => {
+  //   async function fetchData () {
+  //     const response = await data;
+  //     setAppState(response)
+  //   }
+  //   fetchData();
+  // }, []);
 
   // how get data from api
   // useEffect(() => {
@@ -22,8 +27,8 @@ export const Calendar = (props) => {
 
   return (
     <div className="container">
-      <div className="content_container">
-        <div className="header_container">
+      <div className="header_container">
+        <div className="header">
           <div className="title_container">Calendar</div>
           <div className="buttons_container">
             <Dropdown>
@@ -46,7 +51,7 @@ export const Calendar = (props) => {
         </div>
 
       </div>
-      <EventsTable state={state} />
+      <EventsTable />
     </div>
   );
 }

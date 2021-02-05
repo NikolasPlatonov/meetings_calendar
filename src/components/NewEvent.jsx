@@ -1,5 +1,6 @@
 import React from 'react';
 import {Form, Button} from 'react-bootstrap'
+import {NavLink} from 'react-router-dom';
 
 export const NewEvent = (props) => {
   return (
@@ -56,14 +57,19 @@ export const NewEvent = (props) => {
         </Form>
         <div className="new_event_button_container">
           <Form>
-            <Button variant="secondary" type="cancel">
-              Cancel
+            <NavLink to={`/`} style={{textDecoration: 'none'}}>
+              <Button variant="secondary" type="cancel">
+                Cancel
             </Button>
+            </NavLink>
           </Form>
           <Form>
-            <Button variant="secondary" type="submit">
-              Create
+
+            <NavLink to={`/`} style={{textDecoration: 'none'}}>
+              <Button variant="secondary" type="submit">
+                Create
             </Button>
+            </NavLink>
           </Form>
         </div>
       </div>

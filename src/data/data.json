@@ -1,0 +1,18 @@
+[
+  {
+    "day": "Monday",
+    "eventTime": [
+      { "10:00": true },
+      { "11:00": false },
+      { "12:00": false },
+      { "13:00": false },
+      { "14:00": false },
+      { "15:00": false },
+      { "16:00": false },
+      { "17:00": false },
+      { "18:00": false }
+    ],
+    "title": "Intro to HTML/CSS",
+    "participants": ["Maria", "Bob", "Alex"]
+  }
+]

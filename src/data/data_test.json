@@ -1,0 +1,92 @@
+[
+  {
+    "id": 0,
+    "event": "Intro to HTML/CSS",
+    "participants": ["Maria", "Bob", "Alex"],
+    "day": "Monday",
+    "time": "11:00"
+  },
+  {
+    "id": 1,
+    "event": "Intro to React JS",
+    "participants": ["Maria", "Bob"],
+    "day": "Wednesday",
+    "time": "14:00"
+  },
+  {
+    "id": 2,
+    "event": "Intro to Mongo DB",
+    "participants": ["Bob", "Alex"],
+    "day": "Friday",
+    "time": "16:00"
+  }
+][
+  ({
+    "Monday": [
+      {
+        "10:00": {
+          "title": "Intro to HTML/CSS",
+          "participants": ["Maria", "Bob", "Alex"]
+        }
+      },
+      {
+        "11:00": false
+      },
+      {
+        "12:00": false
+      },
+      {
+        "13:00": false
+      },
+      {
+        "14:00": false
+      },
+      {
+        "15:00": false
+      },
+      {
+        "16:00": false
+      },
+      {
+        "17:00": false
+      },
+      {
+        "18:00": false
+      }
+    ]
+  },
+  {
+    "Thuesday": [
+      {
+        "10:00": false
+      },
+      {
+        "11:00": false
+      },
+      {
+        "12:00": false
+      },
+      {
+        "13:00": false
+      },
+      {
+        "14:00": {
+          "title": "Intro to React JS",
+          "participants": ["Maria", "Bob"]
+        }
+      },
+      {
+        "15:00": false
+      },
+      {
+        "16:00": false
+      },
+      {
+        "17:00": false
+      },
+      {
+        "18:00": false
+      }
+    ]
+  })
+]
