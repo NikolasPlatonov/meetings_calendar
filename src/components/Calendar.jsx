@@ -6,17 +6,6 @@ import {EventsTable} from './EventsTable';
 
 
 export const Calendar = (props) => {
-  // useEffect(() => {
-  //   setAppState(data)
-  // }, []);
-
-  // useEffect(() => {
-  //   async function fetchData () {
-  //     const response = await data;
-  //     setAppState(response)
-  //   }
-  //   fetchData();
-  // }, []);
 
   // how get data from api
   // useEffect(() => {

@@ -91,7 +91,20 @@
 
 .time_title_item {
   text-align: center;
-  font-weight: 600;
   height: 50px;
   border-style: solid;
+}
+
+.event_container {
+  display: grid;
+  grid-template-columns: 1fr 25px;
+  align-items: center;
+}
+
+.event_title {
+  font-weight: 600;
+}
+
+.event_delete {
+  cursor: pointer;
 }
