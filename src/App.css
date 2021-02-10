@@ -89,7 +89,15 @@
   height: 50px;
 }
 
-.time_title_item {
+.time_day_title_item {
+  text-align: center;
+  height: 50px;
+  border-style: solid;
+  padding-top: 10px;
+  font-weight: 600;
+}
+
+.event_item {
   text-align: center;
   height: 50px;
   border-style: solid;
@@ -99,10 +107,14 @@
   display: grid;
   grid-template-columns: 1fr 25px;
   align-items: center;
+  background-color: skyblue;
+  height: 100%;
 }
 
 .event_title {
   font-weight: 600;
+  line-height: 20px;
+  margin-bottom: 5px;
 }
 
 .event_delete {
