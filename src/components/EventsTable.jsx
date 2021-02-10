@@ -5,7 +5,6 @@ import {Event} from './Event';
 
 export const EventsTable = () => {
   const [state, setState] = useState(data);
-  console.log("1_STATE===", state)
 
   const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
   const hoursOfDay = ['10', '11', '12', '13', '14', '15', '16', '17', '18'];
