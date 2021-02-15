@@ -1,26 +1,22 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Form, Button} from 'react-bootstrap'
 import {NavLink} from 'react-router-dom';
 import {useForm} from "react-hook-form";
 import Select from 'react-select';
+import daysOfWeek from '../data/dataDays.json'
+import hoursOfDay from '../data/dataTime.json'
 
-export const NewEvent = ({getNewEventData}) => {
-  const [participants, setParticipants] = useState([]);
-  const {register, handleSubmit, errors} = useForm();
+export const NewEvent = ({allParticipants, participants, setParticipants, day, setDay, time, setTime, getNewEventData}) => {
+
+  const {register,
+    handleSubmit,
+    // errors
+  } = useForm();
 
   const onSubmit = (data) => {
-    let newData = {...data, participants}
-    console.log('onSubmit_data2===', newData)
-    getNewEventData(newData);
+    let newEvent = {...data, participants, day, time}
+    getNewEventData(newEvent);
   };
-
-  const allParticipants = [
-    {value: 'Maria', label: 'Maria'},
-    {value: 'Bob', label: 'Bob'},
-    {value: 'Alex', label: 'Alex'},
-    {value: 'Bill', label: 'Bill'},
-    {value: 'Ann', label: 'Ann'},
-  ]
 
   return (
     <div className="container">
@@ -33,38 +29,40 @@ export const NewEvent = ({getNewEventData}) => {
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
 
-
-
             <Form.Group>
               <Form.Label>Participants</Form.Label>
               <Select
                 defaultValue=""
                 isMulti
-                name="colors"
                 options={allParticipants}
                 className="basic-multi-select"
                 classNamePrefix="select"
                 value={participants}
-                onChange={(participants) => {setParticipants(participants)}}
+                onChange={(selectedParticipant) => {setParticipants(selectedParticipant)}}
               />
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
 
             <Form.Group>
               <Form.Label>Day</Form.Label>
-              <Form.Control as="select" name="day" defaultValue="not_selected" ref={register}>
-                <option value="not_selected"></option>
-                <option value="Monday">Monday</option>
-                <option value="Tuesday">Tuesday</option>
-                <option value="Wednesday">Wednesday</option>
-                <option value="Thursday">Thursday</option>
-                <option value="Friday">Friday</option>
-              </Form.Control>
+              <Select
+                defaultValue=""
+                options={daysOfWeek}
+                className="basic-multi-select"
+                classNamePrefix="select"
+                onChange={(selectedDay) => {setDay(selectedDay)}}
+              />
             </Form.Group>
 
             <Form.Group>
               <Form.Label>Time</Form.Label>
-              <Form.Control name="time" type="number" ref={register({min: 10, max: 18})} defaultValue="10" />
+              <Select
+                defaultValue=""
+                options={hoursOfDay}
+                className="basic-multi-select"
+                classNamePrefix="select"
+                onChange={(selectedTime) => {setTime(selectedTime)}}
+              />
             </Form.Group>
           </div>
 
@@ -74,19 +72,13 @@ export const NewEvent = ({getNewEventData}) => {
                 Cancel
              </Button>
             </NavLink>
-            <NavLink to={`/`} style={{textDecoration: 'none'}}>
-              <Button variant="secondary" type="submit">
-                Submit
+
+            <Button variant="secondary" type="submit">
+              Submit
             </Button>
-            </NavLink>
           </div>
         </div>
       </Form >
     </div>
   );
 }
-
-
-
-
-

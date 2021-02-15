@@ -1,27 +1,16 @@
-import React, {useState} from 'react';
-import _ from 'lodash';
-import data from '../data/data.json';
+import React from 'react';
 import {Event} from './Event';
 
-export const EventsTable = () => {
-  const [state, setState] = useState(data);
-  console.log("state", state)
-
+export const EventsTable = ({data, deleteEvent}) => {
   const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
   const hoursOfDay = ['10', '11', '12', '13', '14', '15', '16', '17', '18'];
-
-  const deleteEvent = (day, time) => {
-    let newState = _.cloneDeep(state);
-    _.unset(newState, day + '.' + time)
-    setState(newState)
-  }
 
   const dayFilter = (data, hoursArr, day) => {
     let result = hoursArr.map(hour => {
       return (
         <div className="event_item" key={day + hour}>
           {data[day] && data[day][hour] ?
-            <Event title={data[day][hour]['title']} day={day} time={hour} deleteEvent={deleteEvent} /> :
+            <Event title={data[day][hour]['eventName']} day={day} time={hour} deleteEvent={deleteEvent} /> :
             ''}
 
         </div>
@@ -52,7 +41,7 @@ export const EventsTable = () => {
         <div className="table_day_events" >
 
           {daysOfWeek.map(day => {
-            return (<div key={day}>{dayFilter(state, hoursOfDay, day)}</div>)
+            return (<div key={day}>{dayFilter(data, hoursOfDay, day)}</div>)
           })}
 
         </div>

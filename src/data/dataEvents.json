@@ -1,18 +1,18 @@
 {
   "Monday": {
     "10": {
-      "title": "Intro to HTML/CSS",
+      "eventName": "Intro to HTML/CSS",
       "participants": ["Maria", "Bob", "Alex"]
     },
     "18": {
-      "title": "Intro to React JS",
+      "eventName": "Intro to React JS",
       "participants": ["Maria", "Bob", "Alex"]
     }
   },
 
   "Thursday": {
     "14": {
-      "title": "Intro to React JS",
+      "eventName": "Intro to React JS",
       "participants": ["Maria", "Bob"]
     }
   }

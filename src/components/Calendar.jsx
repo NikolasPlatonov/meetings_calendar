@@ -5,7 +5,7 @@ import {EventsTable} from './EventsTable';
 
 
 
-export const Calendar = (props) => {
+export const Calendar = ({data, deleteEvent}) => {
 
   // how get data from api
   // useEffect(() => {
@@ -40,7 +40,7 @@ export const Calendar = (props) => {
         </div>
 
       </div>
-      <EventsTable />
+      <EventsTable data={data} deleteEvent={deleteEvent} />
     </div>
   );
 }
