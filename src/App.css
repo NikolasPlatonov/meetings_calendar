@@ -54,7 +54,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   margin: 100px;
-  height: 350px;
+  height: 450px;
 }
 
 .dropdown_row_item {
