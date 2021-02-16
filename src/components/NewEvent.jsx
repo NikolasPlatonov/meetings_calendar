@@ -14,7 +14,20 @@ export const NewEvent = ({allParticipants, participants, setParticipants, day, s
   } = useForm();
 
   const onSubmit = (data) => {
-    let newEvent = {...data, participants, day, time}
+    let dayName = day.label;
+    let timeName = time.label;
+    let newEvent =
+    {
+      [dayName]: {
+        [timeName.slice(0, 2)]: {
+          eventName: data.eventName,
+          participants: participants.map((item) => {
+            return item.value
+          }),
+        }
+      }
+    }
+
     getNewEventData(newEvent);
   };
 

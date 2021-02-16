@@ -20,8 +20,8 @@ export const App = () => {
     setData(newState);
   };
 
-  const getNewEventData = (newEvent) => {
-    setData({ ...data, newEvent });
+  const getNewEventData = (event) => {
+    setData({ ...data, event });
   };
 
   return (
