@@ -21,7 +21,9 @@ export const App = () => {
   };
 
   const getNewEventData = (event) => {
-    setData({ ...data, event });
+    console.log('event===', event);
+    let newEventDay = day.label;
+    setData({ ...data, [newEventDay]: Object.values(event)[0] });
   };
 
   return (
