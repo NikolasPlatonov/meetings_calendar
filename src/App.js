@@ -21,7 +21,21 @@ export const App = () => {
   };
 
   const getNewEventData = (event) => {
-    console.log('event===', event);
+    // Object.keys(event)
+    console.log('Object.keys(event)', Object.keys(event));
+    console.log('Object.keys(data)', Object.keys(data));
+    let eventDaysArr = Object.keys(data);
+
+    if (
+      eventDaysArr.filter((dayName) => {
+        return dayName === Object.keys(event)[0];
+      })
+    ) {
+      console.log('Day selected!');
+    } else {
+      console.log('Day NOT   selected!');
+    }
+
     let newEventDay = day.label;
     setData({ ...data, [newEventDay]: Object.values(event)[0] });
   };
